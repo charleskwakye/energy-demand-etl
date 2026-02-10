@@ -1,2 +1,2 @@
-# smart-home-energy-etl
+energy-demand-etl
 Internship Final Project
