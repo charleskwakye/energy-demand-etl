@@ -65,6 +65,13 @@ Cleaning steps:
 - Filters out negative power readings
 - Renames all columns to use lowercase with underscores
 
+**Sub-meter Unit Conversion:**
+- Sub-meter values were converted from Wh to kWh (divided by 1000)
+- This was necessary because Power BI calculations revealed the original readings were in Wh, not kWh
+- Sub-meter readings represent only a portion of household consumption (some appliances are unmetered)
+- Unmetered consumption is calculated in Power BI using DAX
+- The original column names were preserved to avoid schema mismatch with the expected project structure
+
 New columns added:
 - `hour_of_day`: Hour number (0-23)
 - `day_of_week`: Day name (Monday, Tuesday, etc.)
